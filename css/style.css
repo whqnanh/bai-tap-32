@@ -150,6 +150,27 @@ button, input, textarea, select {
   gap: 0.75rem;
 }
 
+.header-avatar-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+.header-avatar-img {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.header-avatar-link:hover .header-avatar-img {
+  transform: scale(1.08);
+  border-color: var(--accent-color);
+}
+
 .btn-icon {
   background: transparent;
   border: 1px solid var(--border-color);
@@ -774,6 +795,32 @@ button, input, textarea, select {
   object-fit: cover;
 }
 
+.about-badge-card {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.about-badge-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.about-badge-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.2rem 0 0 0 !important;
+}
+
 .about-content h2 {
   font-family: var(--font-serif);
   font-size: 2.4rem;
@@ -987,6 +1034,21 @@ textarea.form-control {
   font-size: 1.35rem;
   color: #ffffff;
   margin-bottom: 0.75rem;
+}
+
+.footer-author-box {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 .footer-brand p {
