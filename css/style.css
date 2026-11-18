@@ -1,15 +1,7 @@
-/* ==========================================================================
-   Bài tập 32: Thiết lập Cửa hàng Trực tuyến Đơn giản bằng Squarespace
-   Kiến trúc giao diện: Phong cách Squarespace 7.1 Commerce (Minimalist & Modern)
-   ========================================================================== */
-
 :root {
-  /* Bảng màu chính (Bước 4: Bảng màu 3 màu tùy biến) */
-  --primary-color: #1e3a2f;       /* Màu 1: Xanh rừng thông đậm (Deep Pine Green) */
-  --accent-color: #d97706;        /* Màu 2: Hổ phách ấm áp (Warm Amber/Ochre) */
-  --bg-color: #f9f7f2;            /* Màu 3: Kem ngà Bắc Âu dịu nhẹ (Soft Cream/Alabaster) */
-  
-  /* Các biến màu phụ trợ hỗ trợ giao diện */
+  --primary-color: #1e3a2f;
+  --accent-color: #d97706;
+  --bg-color: #f9f7f2;
   --text-dark: #1f2937;
   --text-muted: #6b7280;
   --white: #ffffff;
@@ -29,7 +21,6 @@
   --font-serif: 'Playfair Display', Georgia, serif;
 }
 
-/* Base Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -73,91 +64,6 @@ button, input, textarea, select {
   padding: 0 1.5rem;
 }
 
-/* ==========================================================================
-   1. Assignment Top Bar (Thông báo tiêu chí bài tập 32)
-   ========================================================================== */
-.assignment-banner {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #11221c 100%);
-  color: #f3f4f6;
-  font-size: 0.825rem;
-  padding: 0.55rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 1001;
-}
-
-.assignment-banner .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-
-.banner-left {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 500;
-}
-
-.banner-badge {
-  background-color: var(--accent-color);
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.7rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: var(--radius-full);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.banner-steps {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.775rem;
-}
-
-.step-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: #d1d5db;
-}
-
-.step-item.checked svg {
-  color: #34d399;
-}
-
-.banner-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.btn-open-palette-bar {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  transition: var(--transition);
-}
-
-.btn-open-palette-bar:hover {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-/* ==========================================================================
-   2. Header & Primary Navigation (Bước 3: Navigation)
-   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -238,25 +144,6 @@ button, input, textarea, select {
   width: 100%;
 }
 
-/* Tag chú thích cho nút Get In Touch (đã đổi tên từ Contact theo bước 3) */
-.nav-link.get-in-touch-link {
-  color: var(--primary-color);
-  position: relative;
-}
-
-.nav-pill-badge {
-  font-size: 0.65rem;
-  background: var(--accent-color);
-  color: #fff;
-  padding: 0.1rem 0.4rem;
-  border-radius: var(--radius-full);
-  margin-left: 0.3rem;
-  vertical-align: middle;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-/* Header Utilities */
 .header-actions {
   display: flex;
   align-items: center;
@@ -305,9 +192,6 @@ button, input, textarea, select {
   display: none;
 }
 
-/* ==========================================================================
-   3. Hero Section (Bước 1: Template Store trực tuyến)
-   ========================================================================== */
 .hero-section {
   position: relative;
   padding: 5rem 0 4.5rem;
@@ -435,7 +319,6 @@ button, input, textarea, select {
   color: var(--accent-color);
 }
 
-/* Hero Media Box */
 .hero-media-wrapper {
   position: relative;
 }
@@ -497,9 +380,6 @@ button, input, textarea, select {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   4. Store / Products Section (Bước 2: Thêm 3 Sản Phẩm)
-   ========================================================================== */
 .store-section {
   padding: 5rem 0;
   background-color: var(--white);
@@ -707,9 +587,6 @@ button, input, textarea, select {
   transform: scale(1.03);
 }
 
-/* ==========================================================================
-   5. Site Styles & Color Palette Inspector (Bước 4)
-   ========================================================================== */
 .palette-showcase-section {
   padding: 4.5rem 0;
   background-color: var(--bg-color);
@@ -787,7 +664,6 @@ button, input, textarea, select {
   display: inline-block;
 }
 
-/* Color Swatches Grid */
 .swatches-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -873,9 +749,6 @@ button, input, textarea, select {
   border: 1px solid var(--border-color);
 }
 
-/* ==========================================================================
-   6. About Section
-   ========================================================================== */
 .about-section {
   padding: 5rem 0;
   background-color: var(--white);
@@ -945,9 +818,6 @@ button, input, textarea, select {
   line-height: 1.5;
 }
 
-/* ==========================================================================
-   7. Get In Touch Section (Bước 3: Đổi tên trang Contact -> Get In Touch)
-   ========================================================================== */
 .contact-section {
   padding: 5rem 0;
   background-color: var(--bg-color);
@@ -1024,18 +894,6 @@ button, input, textarea, select {
   font-weight: 600;
 }
 
-.contact-note-badge {
-  background: rgba(217, 119, 6, 0.2);
-  border: 1px dashed var(--accent-color);
-  padding: 0.85rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: #fef3c7;
-  margin-top: 2rem;
-}
-
-/* Contact Form */
 .contact-form-panel {
   padding: 3rem 2.5rem;
 }
@@ -1110,9 +968,6 @@ textarea.form-control {
   border: 1px solid #a7f3d0;
 }
 
-/* ==========================================================================
-   8. Footer & Unlisted Pages Note (Bước 3: Blog Disabled)
-   ========================================================================== */
 .site-footer {
   background-color: #111827;
   color: #9ca3af;
@@ -1122,7 +977,7 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3.5rem;
 }
@@ -1161,22 +1016,6 @@ textarea.form-control {
   padding-left: 4px;
 }
 
-/* Blog Notice trong Footer (minh chứng Bước 3) */
-.blog-notice-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
-  padding: 1rem;
-  font-size: 0.82rem;
-  line-height: 1.5;
-}
-
-.blog-notice-box strong {
-  color: #f3f4f6;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
 .footer-bottom {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1188,9 +1027,6 @@ textarea.form-control {
   font-size: 0.82rem;
 }
 
-/* ==========================================================================
-   9. Cart Drawer & Modal Popups
-   ========================================================================== */
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -1397,7 +1233,6 @@ textarea.form-control {
   background: var(--accent-color);
 }
 
-/* Modal Popup Chung */
 .modal {
   position: fixed;
   top: 0;
@@ -1460,7 +1295,26 @@ textarea.form-control {
   color: var(--text-dark);
 }
 
-/* Toast Notification */
+.size-pill, .color-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  transition: var(--transition);
+}
+
+.size-pill:hover, .color-badge:hover,
+.size-pill.selected, .color-badge.selected {
+  border-color: var(--primary-color);
+  background: rgba(30, 58, 47, 0.05);
+  color: var(--primary-color);
+}
+
 .toast {
   position: fixed;
   bottom: 2rem;
@@ -1486,9 +1340,6 @@ textarea.form-control {
   opacity: 1;
 }
 
-/* ==========================================================================
-   10. Responsive Design
-   ========================================================================== */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1549,28 +1400,4 @@ textarea.form-control {
   .hero-title {
     font-size: 2.3rem;
   }
-  .banner-steps {
-    display: none;
-  }
-}
-
-/* Additional UI elements for Modal Pills */
-.size-pill, .color-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  background: #ffffff;
-  transition: var(--transition);
-}
-
-.size-pill:hover, .color-badge:hover,
-.size-pill.selected, .color-badge.selected {
-  border-color: var(--primary-color);
-  background: rgba(30, 58, 47, 0.05);
-  color: var(--primary-color);
 }

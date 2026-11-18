@@ -3,102 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NORDIC ESSENTIALS — Cửa Hàng Trực Tuyến Squarespace (Bài Tập 32)</title>
-  
-  <!-- SEO & OpenGraph Meta -->
-  <meta name="description" content="Bài tập 32: Thiết lập cấu trúc cơ bản của trang web thương mại điện tử bằng Squarespace với 3 sản phẩm, tùy biến điều hướng Get In Touch và bảng màu 3 sắc độ.">
-  <meta name="author" content="Nguyen Hoang Anh - whqnanh">
+  <title>NORDIC ESSENTIALS — Cửa Hàng Trực Tuyến</title>
+  <meta name="description" content="NORDIC Essentials - Cửa hàng phong cách tối giản với các sản phẩm thủ công, thời trang và đời sống cao cấp.">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display (Squarespace Typography Style) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- =========================================================================
-       1. Top Assignment Bar: Minh chứng tiêu chí Bài tập 32
-       ========================================================================= -->
-  <aside class="assignment-banner" aria-label="Thông tin bài tập 32">
-    <div class="container">
-      <div class="banner-left">
-        <span class="banner-badge">Bài tập 32</span>
-        <span>Thiết lập Cửa hàng Trực tuyến Đơn giản bằng Squarespace</span>
-      </div>
-      <div class="banner-steps">
-        <span class="step-item checked" title="Đã chọn Template Online Store">
-          <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-          </svg>
-          B1: Template Store
-        </span>
-        <span class="step-item checked" title="Đã thêm 3 sản phẩm: Áo phông, Cốc sứ, Túi xách">
-          <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-          </svg>
-          B2: 3 Sản Phẩm Mới
-        </span>
-        <span class="step-item checked" title="Ẩn trang Blog & Đổi tên Contact thành Get In Touch">
-          <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-          </svg>
-          B3: Ẩn Blog & Get In Touch
-        </span>
-        <span class="step-item checked" title="Tùy biến Bảng màu Site Styles với 3 màu">
-          <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-          </svg>
-          B4: Bảng Màu 3 Màu
-        </span>
-      </div>
-      <div class="banner-actions">
-        <a href="#palette-showcase" class="btn-open-palette-bar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0110 10H12V2z"/>
-          </svg>
-          <span>Kiểm tra Site Styles</span>
-        </a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- =========================================================================
-       2. Site Header & Primary Navigation (Bước 3: Navigation)
-       * Ghi chú Bước 3: Trang Blog đã được ẨN khỏi Primary Navigation.
-       * Trang Contact đã được ĐỔI TÊN thành "Get In Touch".
-       ========================================================================= -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Brand Logo -->
-      <a href="#" class="brand-logo" aria-label="Trang chủ NORDIC">
+      <a href="#" class="brand-logo" aria-label="NORDIC Essentials">
         <span class="brand-title">NORDIC</span>
-        <span class="brand-tagline">Squarespace Commerce Store</span>
+        <span class="brand-tagline">Essentials Store</span>
       </a>
 
-      <!-- Primary Navigation (Bước 3) -->
       <nav class="primary-nav" id="primaryNav" aria-label="Điều hướng chính">
         <ul class="nav-list">
           <li><a href="#" class="nav-link active">Trang Chủ</a></li>
-          <li><a href="#store" class="nav-link">Cửa Hàng (Store)</a></li>
+          <li><a href="#store" class="nav-link">Cửa Hàng</a></li>
           <li><a href="#about" class="nav-link">Giới Thiệu</a></li>
-          <li>
-            <!-- Yêu cầu Bước 3: Đổi tên trang Contact thành Get In Touch -->
-            <a href="#get-in-touch" class="nav-link get-in-touch-link">
-              Get In Touch
-              <span class="nav-pill-badge" title="Đã đổi tên từ trang Contact theo Bước 3">B3: Renamed</span>
-            </a>
-          </li>
-          <!-- Trang Blog được ẩn khỏi Primary Navigation theo đúng Bước 3 -->
+          <li><a href="#get-in-touch" class="nav-link">Get In Touch</a></li>
         </ul>
       </nav>
 
-      <!-- Header Utilities -->
       <div class="header-actions">
-        <!-- Palette Link -->
-        <a href="#palette-showcase" class="btn-icon" title="Tùy biến Bảng màu (Bước 4)">
+        <a href="#palette-showcase" class="btn-icon" title="Tùy biến bảng màu">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
             <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
@@ -108,7 +41,6 @@
           </svg>
         </a>
 
-        <!-- Cart Button with Counter -->
         <button class="btn-icon btn-open-cart" aria-label="Giỏ hàng">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
@@ -116,8 +48,7 @@
           <span class="cart-count-badge">0</span>
         </button>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở Menu di động">
+        <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở Menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"/>
             <line x1="3" y1="6" x2="21" y2="6"/>
@@ -129,15 +60,12 @@
   </header>
 
   <main>
-    <!-- =======================================================================
-         3. Hero Section (Bước 1: Chọn Template Thương Mại)
-         ======================================================================= -->
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-subtitle-wrapper">
             <span class="hero-subtitle-dot"></span>
-            <span class="hero-subtitle">Squarespace 7.1 Online Store Template</span>
+            <span class="hero-subtitle">Online Store</span>
           </div>
 
           <h1 class="hero-title">
@@ -145,19 +73,19 @@
           </h1>
 
           <p class="hero-desc">
-            Chào mừng bạn đến với mô hình cửa hàng e-commerce chuẩn Squarespace. Thiết kế trực quan, thanh điều hướng linh hoạt và bảng màu cá nhân hóa mang lại trải nghiệm mua sắm mượt mà nhất.
+            Không gian mua sắm tinh gọn lấy cảm hứng từ phong cách Bắc Âu. Mỗi sản phẩm đều được chọn lọc kỹ lưỡng về chất liệu, công năng và tính thẩm mỹ bền vững.
           </p>
 
           <div class="hero-buttons">
             <a href="#store" class="btn btn-primary">
-              <span>Xem 3 Sản Phẩm Mới</span>
+              <span>Khám Phá Cửa Hàng</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
             <a href="#get-in-touch" class="btn btn-outline">
-              <span>Liên Hệ (Get In Touch)</span>
+              <span>Liên Hệ</span>
             </a>
           </div>
 
@@ -182,7 +110,7 @@
 
         <div class="hero-media-wrapper">
           <div class="hero-media-card">
-            <img src="images/hero-banner.jpg" alt="Không gian cửa hàng phong cách Squarespace Minimalist">
+            <img src="images/hero-banner.jpg" alt="Không gian cửa hàng NORDIC">
           </div>
           <div class="hero-float-card">
             <div class="float-icon">
@@ -193,32 +121,25 @@
               </svg>
             </div>
             <div class="float-text">
-              <h4>Squarespace Store</h4>
-              <p>Phiên bản 7.1 Commerce Grid</p>
+              <h4>Modern Minimal</h4>
+              <p>Chất Lượng Vượt Trội</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =======================================================================
-         4. Store Section (Bước 2: Thêm 3 Sản Phẩm Mới)
-         1. Áo phông
-         2. Cốc
-         3. Túi xách
-         ======================================================================= -->
     <section class="store-section" id="store">
       <div class="container">
         <header class="section-header">
-          <span class="section-tag">Bước 2: Quản lý Sản Phẩm (Commerce)</span>
-          <h2 class="section-title">Danh Mục 3 Sản Phẩm Mới</h2>
+          <span class="section-tag">Bộ Sưu Tập Mới</span>
+          <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
           <p class="section-desc">
-            Các sản phẩm vật lý mẫu được thiết lập đầy đủ tên gọi, hình ảnh chất lượng cao, mô tả đặc tính và mức giá niêm yết rõ ràng theo đúng yêu cầu đề bài.
+            Tuyển tập các sản phẩm thiết kế tinh gọn, mang lại cảm giác thoải mái và nâng tầm phong cách sống mỗi ngày.
           </p>
         </header>
 
         <div class="products-grid">
-          <!-- Sản phẩm 1: Áo phông -->
           <article class="product-card">
             <div class="product-media">
               <span class="product-badge">Bán chạy nhất</span>
@@ -251,7 +172,6 @@
             </div>
           </article>
 
-          <!-- Sản phẩm 2: Cốc sứ -->
           <article class="product-card">
             <div class="product-media">
               <span class="product-badge">Thủ công nghệ nhân</span>
@@ -284,7 +204,6 @@
             </div>
           </article>
 
-          <!-- Sản phẩm 3: Túi xách -->
           <article class="product-card">
             <div class="product-media">
               <span class="product-badge">Thân thiện môi trường</span>
@@ -320,20 +239,16 @@
       </div>
     </section>
 
-    <!-- =======================================================================
-         5. Site Styles & Color Palette Section (Bước 4: Tùy biến Bảng màu)
-         ======================================================================= -->
     <section class="palette-showcase-section" id="palette-showcase">
       <div class="container">
         <div class="palette-box">
           <div class="palette-header">
             <div class="palette-info">
-              <span class="section-tag">Bước 4: Design > Site Styles > Color Palette</span>
-              <h3>Bảng Màu Tùy Biến (3 Màu Chủ Đạo)</h3>
-              <p>Mô phỏng chính xác bộ công cụ tùy biến màu sắc của Squarespace. Bạn có thể chọn các bảng màu mẫu hoặc tùy chỉnh từng màu bằng công cụ chọn màu trực tiếp.</p>
+              <span class="section-tag">Site Styles</span>
+              <h3>Bảng Màu Tùy Biến</h3>
+              <p>Lựa chọn các bảng màu mẫu hoặc tùy chỉnh 3 màu sắc đại diện cho phong cách thương hiệu của bạn.</p>
             </div>
 
-            <!-- Nút chọn các Palette Preset -->
             <div class="palette-presets-container">
               <button class="btn-preset active" data-preset="forest">
                 <div class="preset-preview-dots">
@@ -341,7 +256,7 @@
                   <span class="dot" style="background:#d97706;"></span>
                   <span class="dot" style="background:#f9f7f2;"></span>
                 </div>
-                <span>Forest Minimal (Mặc định)</span>
+                <span>Forest Minimal</span>
               </button>
 
               <button class="btn-preset" data-preset="terracotta">
@@ -364,17 +279,15 @@
             </div>
           </div>
 
-          <!-- 3 Thẻ Màu Chính Của Bảng Màu (Bước 4) -->
           <div class="swatches-grid">
-            <!-- Màu 1: Màu chính (Primary Color) -->
             <div class="swatch-card">
               <div class="swatch-color-box" id="swatchPrimary" style="background-color: var(--primary-color);">
                 #1E3A2F
               </div>
               <div class="swatch-details">
                 <div class="swatch-label">
-                  <h4>Màu 1: Primary (Màu chính)</h4>
-                  <span>Dùng cho Header, Tiêu đề, Nút bấm chính</span>
+                  <h4>Màu chính (Primary)</h4>
+                  <span>Header, tiêu đề và nút bấm chính</span>
                 </div>
                 <div class="color-input-wrapper">
                   <span class="hex-value" id="primaryHex">#1E3A2F</span>
@@ -383,15 +296,14 @@
               </div>
             </div>
 
-            <!-- Màu 2: Màu điểm nhấn (Accent Color) -->
             <div class="swatch-card">
               <div class="swatch-color-box" id="swatchAccent" style="background-color: var(--accent-color);">
                 #D97706
               </div>
               <div class="swatch-details">
                 <div class="swatch-label">
-                  <h4>Màu 2: Accent (Điểm nhấn)</h4>
-                  <span>Dùng cho Badge, Tagline, Nút tương tác hover</span>
+                  <h4>Màu điểm nhấn (Accent)</h4>
+                  <span>Nhãn sản phẩm và hiệu ứng tương tác</span>
                 </div>
                 <div class="color-input-wrapper">
                   <span class="hex-value" id="accentHex">#D97706</span>
@@ -400,15 +312,14 @@
               </div>
             </div>
 
-            <!-- Màu 3: Màu nền website (Background Neutral) -->
             <div class="swatch-card">
               <div class="swatch-color-box" id="swatchBg" style="background-color: var(--bg-color); color: #222;">
                 #F9F7F2
               </div>
               <div class="swatch-details">
                 <div class="swatch-label">
-                  <h4>Màu 3: Neutral (Màu nền nhẹ)</h4>
-                  <span>Dùng cho Background toàn trang, Khối nội dung phụ</span>
+                  <h4>Màu nền (Background)</h4>
+                  <span>Nền toàn trang và các khối phụ</span>
                 </div>
                 <div class="color-input-wrapper">
                   <span class="hex-value" id="bgHex">#F9F7F2</span>
@@ -421,9 +332,6 @@
       </div>
     </section>
 
-    <!-- =======================================================================
-         6. About Section
-         ======================================================================= -->
     <section class="about-section" id="about">
       <div class="container about-grid">
         <div class="about-image-wrapper">
@@ -436,7 +344,7 @@
             Chúng tôi tin rằng cái đẹp thực sự bắt nguồn từ sự tinh giản. Mỗi sản phẩm trong bộ sưu tập — từ chiếc áo phông thoáng mát đến chiếc cốc sứ thủ công hay túi tote canvas thân thiện môi trường — đều trải qua quá trình tuyển chọn chất liệu nghiêm ngặt.
           </p>
           <p>
-            Nền tảng thương mại điện tử Squarespace giúp thương hiệu truyền tải thông điệp một cách chân thực, đồng thời mang đến quy trình mua sắm tiện lợi và an tâm tuyệt đối cho khách hàng.
+            Quy trình sản xuất được định hướng tôn trọng tự nhiên, hướng đến sự thoải mái và giá trị sử dụng lâu dài theo thời gian.
           </p>
 
           <div class="about-features">
@@ -453,25 +361,21 @@
       </div>
     </section>
 
-    <!-- =======================================================================
-         7. Get In Touch Section (Bước 3: Đổi tên trang Contact thành "Get In Touch")
-         ======================================================================= -->
     <section class="contact-section" id="get-in-touch">
       <div class="container">
         <header class="section-header" style="margin-bottom: 2.5rem;">
-          <span class="section-tag">Bước 3: Navigation > Đổi tên Contact thành Get In Touch</span>
-          <h2 class="section-title">Trang "Get In Touch"</h2>
+          <span class="section-tag">Liên Hệ</span>
+          <h2 class="section-title">Get In Touch</h2>
           <p class="section-desc">
-            Theo yêu cầu của Bài tập 32: Trang <strong>Contact</strong> đã được đổi tên thành <strong>Get In Touch</strong> và trang <strong>Blog</strong> đã được ẩn khỏi thanh điều hướng chính.
+            Hãy gửi tin nhắn cho chúng tôi nếu bạn có bất kỳ câu hỏi nào về sản phẩm hoặc dịch vụ.
           </p>
         </header>
 
         <div class="contact-wrapper">
-          <!-- Cột trái: Thông tin liên hệ -->
           <div class="contact-info-panel">
             <div>
               <h3>Get In Touch With Us</h3>
-              <p>Bạn có bất kỳ câu hỏi nào về 3 sản phẩm mẫu hoặc trải nghiệm mua sắm? Hãy gửi tin nhắn cho chúng tôi.</p>
+              <p>Chúng tôi luôn sẵn lòng lắng nghe ý kiến đóng góp và giải đáp mọi thắc mắc của bạn.</p>
 
               <ul class="contact-meta-list">
                 <li class="meta-item">
@@ -481,7 +385,7 @@
                     </svg>
                   </div>
                   <div class="meta-content">
-                    <h5>Địa chỉ Cửa hàng</h5>
+                    <h5>Địa chỉ</h5>
                     <span>Số 123 Đường Sáng Tạo, Quận 1, TP. Hồ Chí Minh</span>
                   </div>
                 </li>
@@ -494,7 +398,7 @@
                     </svg>
                   </div>
                   <div class="meta-content">
-                    <h5>Hòm thư hỗ trợ</h5>
+                    <h5>Email</h5>
                     <span>contact@nordicstore.local</span>
                   </div>
                 </li>
@@ -506,19 +410,14 @@
                     </svg>
                   </div>
                   <div class="meta-content">
-                    <h5>Đường dây nóng</h5>
+                    <h5>Điện thoại</h5>
                     <span>(+84) 090 123 4567 (08:30 - 21:00)</span>
                   </div>
                 </li>
               </ul>
             </div>
-
-            <div class="contact-note-badge">
-              <strong>Ghi chú tiêu chí chấm điểm:</strong> Trang này ban đầu là "Contact", đã được cập nhật Page Title và Navigation Title thành "Get In Touch" đúng chuẩn Squarespace Settings.
-            </div>
           </div>
 
-          <!-- Cột phải: Biểu mẫu liên hệ -->
           <div class="contact-form-panel">
             <h4>Gửi Lời Nhắn Đến Cửa Hàng</h4>
             <p>Vui lòng điền thông tin bên dưới, nhân viên hỗ trợ sẽ liên lạc với bạn sớm nhất.</p>
@@ -540,9 +439,9 @@
               <div class="form-group">
                 <label for="contactSubject">Chủ đề cần tư vấn</label>
                 <select id="contactSubject" class="form-control">
-                  <option value="tu-van-san-pham">Tư vấn về 3 sản phẩm (Áo phông / Cốc / Túi)</option>
+                  <option value="tu-van-san-pham">Tư vấn thông tin sản phẩm</option>
                   <option value="chinh-sach-giao-hang">Chính sách vận chuyển & đổi trả</option>
-                  <option value="dong-gop-y-kien">Đóng góp ý kiến về cửa hàng Squarespace</option>
+                  <option value="hop-tac">Hợp tác kinh doanh</option>
                 </select>
               </div>
 
@@ -565,34 +464,28 @@
     </section>
   </main>
 
-  <!-- =========================================================================
-       8. Footer & Unlisted Blog Page Notice (Bước 3: Navigation)
-       ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <h4>NORDIC STORE</h4>
           <p>
-            Mô hình cửa hàng thương mại điện tử tinh gọn được xây dựng theo kiến trúc Squarespace 7.1 Commerce phục vụ thực hành Bài tập 32.
-          </p>
-          <p style="font-size: 0.8rem; color: #9ca3af;">
-            Sinh viên thực hiện: Hoàng Anh (whqnanh)
+            Cửa hàng phong cách tối giản với những sản phẩm tuyển chọn mang lại trải nghiệm bền vững và tinh tế.
           </p>
         </div>
 
         <div>
-          <h5 class="footer-title">Thanh Điều Hướng</h5>
+          <h5 class="footer-title">Khám Phá</h5>
           <ul class="footer-links">
-            <li><a href="#">Trang Chủ (Home)</a></li>
-            <li><a href="#store">Cửa Hàng (Store)</a></li>
-            <li><a href="#about">Giới Thiệu (About)</a></li>
-            <li><a href="#get-in-touch">Get In Touch (Đã đổi tên)</a></li>
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#store">Cửa Hàng</a></li>
+            <li><a href="#about">Giới Thiệu</a></li>
+            <li><a href="#get-in-touch">Get In Touch</a></li>
           </ul>
         </div>
 
         <div>
-          <h5 class="footer-title">Sản Phẩm (B2)</h5>
+          <h5 class="footer-title">Sản Phẩm</h5>
           <ul class="footer-links">
             <li><a href="#store" onclick="openQuickView(1)">Áo phông Cotton Tối Giản</a></li>
             <li><a href="#store" onclick="openQuickView(2)">Cốc Sứ Tráng Men Mờ</a></li>
@@ -601,25 +494,23 @@
         </div>
 
         <div>
-          <h5 class="footer-title">Yêu Cầu Bước 3 (Blog)</h5>
-          <!-- Minh chứng Bước 3: Ẩn trang Blog khỏi Primary Navigation -->
-          <div class="blog-notice-box">
-            <strong>Trang Blog (Not Linked / Hidden):</strong>
-            Trang Blog đã được ẩn khỏi Thanh điều hướng chính (Primary Navigation) theo yêu cầu Bước 3 và được xếp vào nhóm "Unlisted Pages" trên hệ thống Squarespace.
-          </div>
+          <h5 class="footer-title">Chính Sách</h5>
+          <ul class="footer-links">
+            <li><a href="#">Chính sách giao hàng</a></li>
+            <li><a href="#">Đổi trả trong 30 ngày</a></li>
+            <li><a href="#">Bảo mật thông tin</a></li>
+            <li><a href="#">Điều khoản dịch vụ</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 NORDIC Essentials • Bài tập 32 Lập trình Web • Squarespace E-Commerce</span>
-        <span>Repository: <a href="https://github.com/whqnanh/bai-tap-32" target="_blank" style="color: var(--accent-color); text-decoration: underline;">whqnanh/bai-tap-32</a></span>
+        <span>© 2026 NORDIC Essentials • All rights reserved.</span>
+        <span>Minimalist E-Commerce Store</span>
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================================
-       9. Slide-out Cart Drawer
-       ========================================================================= -->
   <div class="cart-overlay" id="cartOverlay"></div>
   <aside class="cart-drawer" id="cartDrawer" aria-label="Giỏ hàng">
     <div class="cart-header">
@@ -632,9 +523,7 @@
       <button class="btn-close-cart" id="closeCartBtn" aria-label="Đóng giỏ hàng">&times;</button>
     </div>
 
-    <div class="cart-body" id="cartItemsContainer">
-      <!-- Nội dung sản phẩm giỏ hàng được chèn qua js/main.js -->
-    </div>
+    <div class="cart-body" id="cartItemsContainer"></div>
 
     <div class="cart-footer">
       <div class="cart-subtotal">
@@ -651,9 +540,6 @@
     </div>
   </aside>
 
-  <!-- =========================================================================
-       10. Quick View Product Modal
-       ========================================================================= -->
   <div class="modal" id="quickViewModal" aria-hidden="true">
     <div class="modal-dialog" style="max-width: 750px;">
       <button class="modal-close" aria-label="Đóng">&times;</button>
@@ -691,9 +577,6 @@
     </div>
   </div>
 
-  <!-- =========================================================================
-       11. Checkout Success Modal
-       ========================================================================= -->
   <div class="modal" id="checkoutModal" aria-hidden="true">
     <div class="modal-dialog" style="text-align: center; max-width: 460px;">
       <button class="modal-close" aria-label="Đóng">&times;</button>
@@ -706,18 +589,16 @@
         Đặt Hàng Thành Công!
       </h3>
       <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
-        Cảm ơn bạn đã trải nghiệm mô hình thương mại điện tử Squarespace. Tổng giá trị đơn hàng của bạn là: <strong id="checkoutTotalText" style="color: var(--primary-color);">0₫</strong>.
+        Cảm ơn bạn đã đặt hàng. Tổng giá trị đơn hàng của bạn là: <strong id="checkoutTotalText" style="color: var(--primary-color);">0₫</strong>.
       </p>
       <button class="btn btn-primary btn-modal-close" style="width: 100%;">
-        Tiếp Tục Khám Phá Cửa Hàng
+        Tiếp Tục Mua Sắm
       </button>
     </div>
   </div>
 
-  <!-- Toast Notification Container -->
   <div class="toast" id="toastNotification"></div>
 
-  <!-- JavaScript Logic -->
   <script src="js/main.js"></script>
 </body>
 </html>

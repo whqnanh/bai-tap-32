@@ -1,16 +1,8 @@
-/**
- * Bài tập 32: Thiết lập Cửa hàng Trực tuyến Đơn giản bằng Squarespace
- * Script xử lý: Giỏ hàng, Đổi màu giao diện (Site Styles), Modal xem nhanh & Form liên hệ
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // DỮ LIỆU SẢN PHẨM (Bước 2: 3 Sản Phẩm Mới)
-  // ==========================================
   const products = [
     {
       id: 1,
-      title: 'Áo phông Cotton Tối Giản (Minimalist T-Shirt)',
+      title: 'Áo phông Cotton Tối Giản',
       category: 'Thời trang Unisex',
       price: 299000,
       image: 'images/ao-phong.jpg',
@@ -21,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 2,
-      title: 'Cốc Sứ Tráng Men Mờ (Ceramic Craft Mug)',
+      title: 'Cốc Sứ Tráng Men Mờ',
       category: 'Đồ gia dụng & Đời sống',
       price: 189000,
       image: 'images/coc-su.jpg',
@@ -32,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 3,
-      title: 'Túi Xách Vải Canvas Cao Cấp (Eco Canvas Tote Bag)',
+      title: 'Túi Xách Vải Canvas Cao Cấp',
       category: 'Phụ kiện thường ngày',
       price: 249000,
       image: 'images/tui-xach.jpg',
@@ -43,9 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // ==========================================
-  // QUẢN LÝ GIỎ HÀNG (Cart State)
-  // ==========================================
   let cart = [];
 
   const cartOverlay = document.getElementById('cartOverlay');
@@ -57,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCartBtn = document.getElementById('closeCartBtn');
   const checkoutBtn = document.getElementById('checkoutBtn');
 
-  // Mở/Đóng Cart Drawer
   function openCart() {
     cartOverlay.classList.add('active');
     cartDrawer.classList.add('active');
@@ -74,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
   closeCartBtn.addEventListener('click', closeCart);
   cartOverlay.addEventListener('click', closeCart);
 
-  // Thêm vào giỏ hàng
   window.addToCart = function(productId, qty = 1) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
@@ -90,11 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderCart();
-    showToast(`Đã thêm "${product.title}" vào giỏ hàng!`);
+    showToast(`Đã thêm "${product.title}" vào giỏ hàng`);
     openCart();
   };
 
-  // Tăng giảm số lượng
   window.changeQty = function(productId, delta) {
     const item = cart.find(i => i.id === productId);
     if (!item) return;
@@ -106,19 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart();
   };
 
-  // Xóa khỏi giỏ
   window.removeFromCart = function(productId) {
     cart = cart.filter(i => i.id !== productId);
     renderCart();
-    showToast('Đã xóa sản phẩm khỏi giỏ hàng.');
+    showToast('Đã xóa sản phẩm khỏi giỏ hàng');
   };
 
-  // Định dạng tiền tệ VND
   function formatMoney(amount) {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
   }
 
-  // Render lại giỏ hàng
   function renderCart() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCountBadges.forEach(badge => {
@@ -133,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </svg>
           <p>Giỏ hàng của bạn đang trống</p>
           <button class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem;" onclick="document.getElementById('closeCartBtn').click(); location.href='#store';">
-            Khám phá 3 sản phẩm ngay
+            Khám phá sản phẩm
           </button>
         </div>
       `;
@@ -178,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cartSubtotalEl.textContent = formatMoney(subtotal);
   }
 
-  // Xử lý nút Thanh toán
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (cart.length === 0) return;
@@ -190,9 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // BƯỚC 4: TÙY BIẾN MÀU SẮC (Site Styles Palette)
-  // ==========================================
   const primaryPicker = document.getElementById('primaryColorPicker');
   const accentPicker = document.getElementById('accentColorPicker');
   const bgPicker = document.getElementById('bgColorPicker');
@@ -207,25 +186,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const presetBtns = document.querySelectorAll('.btn-preset');
 
-  // Các bộ Palette mẫu chuẩn thiết kế
   const palettePresets = {
     forest: {
       primary: '#1e3a2f',
       accent: '#d97706',
-      bg: '#f9f7f2',
-      name: 'Scandinavian Forest'
+      bg: '#f9f7f2'
     },
     terracotta: {
       primary: '#c2593f',
       accent: '#2d3748',
-      bg: '#faf8f5',
-      name: 'Modern Terracotta'
+      bg: '#faf8f5'
     },
     indigo: {
       primary: '#1a2a44',
       accent: '#c5a880',
-      bg: '#f4f6f8',
-      name: 'Luxury Midnight'
+      bg: '#f4f6f8'
     }
   };
 
@@ -257,11 +232,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (announce) {
-      showToast(`Đã áp dụng bảng màu mới (Bước 4): ${primary} | ${accent} | ${bg}`);
+      showToast(`Đã áp dụng bảng màu: ${primary} | ${accent} | ${bg}`);
     }
   }
 
-  // Lắng nghe sự kiện Color Picker
   if (primaryPicker) {
     primaryPicker.addEventListener('input', (e) => {
       applyPalette(e.target.value, accentPicker.value, bgPicker.value, false);
@@ -283,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chuyển preset mẫu
   presetBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       presetBtns.forEach(b => b.classList.remove('active'));
@@ -296,12 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Khởi tạo bảng màu ban đầu
   applyPalette('#1e3a2f', '#d97706', '#f9f7f2', false);
 
-  // ==========================================
-  // MODAL XEM NHANH SẢN PHẨM (Quick View)
-  // ==========================================
   const quickViewModal = document.getElementById('quickViewModal');
   const qvImage = document.getElementById('qvImage');
   const qvCategory = document.getElementById('qvCategory');
@@ -326,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
     qvPrice.textContent = formatMoney(product.price);
     qvDesc.textContent = product.desc;
 
-    // Sizes
     qvSizes.innerHTML = product.sizes.map((s, idx) => `
       <label class="size-pill ${idx === 0 ? 'selected' : ''}">
         <input type="radio" name="qvSize" value="${s}" ${idx === 0 ? 'checked' : ''} style="display:none;">
@@ -334,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </label>
     `).join('');
 
-    // Colors
     qvColors.innerHTML = product.colors.map((c, idx) => `
       <label class="color-badge ${idx === 0 ? 'selected' : ''}">
         <input type="radio" name="qvColor" value="${c}" ${idx === 0 ? 'checked' : ''} style="display:none;">
@@ -357,9 +324,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // BƯỚC 3: FORM LIÊN HỆ "GET IN TOUCH"
-  // ==========================================
   const contactForm = document.getElementById('contactForm');
   const contactAlert = document.getElementById('contactAlert');
 
@@ -380,11 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
         </svg>
-        <span>Cảm ơn <strong>${name}</strong>! Yêu cầu của bạn đã được gửi đến trang <strong>Get In Touch</strong>. Chúng tôi sẽ phản hồi qua email <strong>${email}</strong> trong 24h.</span>
+        <span>Cảm ơn <strong>${name}</strong>! Tin nhắn của bạn đã được gửi thành công. Chúng tôi sẽ phản hồi qua email <strong>${email}</strong> trong thời gian sớm nhất.</span>
       `;
 
       contactForm.reset();
-      showToast('Đã gửi thông tin liên hệ thành công!');
+      showToast('Đã gửi thông tin liên hệ thành công');
 
       setTimeout(() => {
         contactAlert.style.display = 'none';
@@ -392,9 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // ĐÓNG TẤT CẢ MODAL
-  // ==========================================
   function closeAllModals() {
     document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
     document.body.style.overflow = '';
@@ -412,9 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // TOAST THÔNG BÁO TIỆN ÍCH
-  // ==========================================
   function showToast(message) {
     let toast = document.querySelector('.toast');
     if (!toast) {
@@ -434,9 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3200);
   }
 
-  // ==========================================
-  // MOBILE MENU TOGGLE & ACTIVE LINKS
-  // ==========================================
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const primaryNav = document.getElementById('primaryNav');
 
@@ -452,6 +407,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Khởi tạo hiển thị giỏ ban đầu
   renderCart();
 });
